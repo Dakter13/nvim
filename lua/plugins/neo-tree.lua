@@ -1,12 +1,13 @@
 return{
-  --панелька сбоку для проектов
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "muniftanjim/nui.nvim",
-     }
-   }
+--панелька сбоку для проектов
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons",
+    "muniftanjim/nui.nvim",
+   },
+  config = function()
+    vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal toggle left<CR>')
+  end
 }
